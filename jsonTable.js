@@ -1,4 +1,4 @@
-//var a=[{a:1,b:6},{a:3,b:4},{a:5,b:2}];
+//jsonTable.js by Kamonpop Jarujit. Licensed under http://www.apache.org/licenses/LICENSE-2.0
 function jsonTable(json) {
 	this.json = json;
 	var order = {field: undefined, asc: 1};
