@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="style.css" rel="stylesheet">
+        <script src="jsonTable.js"></script>
+        <script>
+            var person = [{name:'Steve',age:56},{name:'Bill',age:57},{name:'Mark',age:29}];
+            function createTable() {
+                var table = new jsonTable(person);
+                table.addTo(document.getElementById('contain'));
+                table.sortWith('age', document.getElementById('contain'));
+            }
+        </script>
+    </head>
+    <body onload="createTable()">
+        <div id="contain"></div>
+    </body>
+</html>
