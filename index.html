@@ -7,12 +7,21 @@
 
     <link rel="stylesheet" href="stylesheets/styles.css">
     <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="javascripts/jsonTable.js"></script>
+    <script>
+        var person = [{name:'Steve',age:56},{name:'Bill',age:57},{name:'Mark',age:29}];
+        function createTable() {
+            var table = new jsonTable(person);
+            table.addTo(document.getElementById('contain'));
+            table.sortWith('age', document.getElementById('contain'));
+        }
+    </script>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
   </head>
-  <body>
+  <body onload="createTable()">
     <div class="wrapper">
       <header>
         <h1>Json2sorttable</h1>
@@ -57,13 +66,18 @@
 
 <ul>
 <li>Write your own styles with css if you want.</li>
-</ul><h2>
+</ul>
+<h2>
 <a name="manually-sort" class="anchor" href="#manually-sort"><span class="octicon octicon-link"></span></a>Manually sort</h2>
 
 <ul>
 <li>Just use sortWith(fieldName, element)</li>
 </ul><pre><code>table.sortWith('a', document.getElementById('contain'));
 </code></pre>
+<h2>
+<a name="demo" class="anchor" href="#demo"><span class="octicon octicon-link"></span></a>Demo</h2>
+
+<div id="contain"></div>
       </section>
       <footer>
         <p>This project is maintained by <a href="https://github.com/ipao">ipao</a></p>
