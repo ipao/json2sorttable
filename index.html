@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Json2sorttable by ipao</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Json2sorttable</h1>
+        <p>create sortable html table from json format.</p>
+
+        <p class="view"><a href="https://github.com/ipao/json2sorttable">View the Project on GitHub <small>ipao/json2sorttable</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/ipao/json2sorttable/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/ipao/json2sorttable/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/ipao/json2sorttable">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>
+<a name="json2sorttable" class="anchor" href="#json2sorttable"><span class="octicon octicon-link"></span></a>json2sorttable</h1>
+
+<p>create sortable html table from json format.</p>
+
+<h2>
+<a name="preparation" class="anchor" href="#preparation"><span class="octicon octicon-link"></span></a>Preparation</h2>
+
+<ul>
+<li>Add script to html file </li>
+<li>Your json (array) format should be an array which contains objects that have the same property like this...</li>
+</ul><pre><code>var yourJSON = [{a:1,b:'c'},{a:3,b:'b'},{a:5,b:'a'},...];
+</code></pre>
+
+<h2>
+<a name="how-to-used" class="anchor" href="#how-to-used"><span class="octicon octicon-link"></span></a>How to used</h2>
+
+<ul>
+<li>Declare variable with your JSON for prepare them.</li>
+</ul><pre><code>var table = new jsonTable(yourJSON);
+</code></pre>
+
+<ul>
+<li>Add it to your element with addTo(element).</li>
+</ul><pre><code>table.addTo(document.getElementById('contain'));
+</code></pre>
+
+<ul>
+<li>Write your own styles with css if you want.</li>
+</ul><h2>
+<a name="manually-sort" class="anchor" href="#manually-sort"><span class="octicon octicon-link"></span></a>Manually sort</h2>
+
+<ul>
+<li>Just use sortWith(fieldName, element)</li>
+</ul><pre><code>table.sortWith('a', document.getElementById('contain'));
+</code></pre>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/ipao">ipao</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
