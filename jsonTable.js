@@ -25,6 +25,7 @@ function jsonTable(json) {
 		for(var i = 0; i < len; i++) {
 			head[i].onclick = function() {
 				sortWith(this.innerHTML, el);
+				return false;
 			};
 		}
 	}
