@@ -42,5 +42,6 @@ function jsonTable(json) {
 			});
 		}
 		addTo(el);
+		return false;
 	}
 }
